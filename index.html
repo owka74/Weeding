@@ -1,0 +1,136 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ahmed & Sahar Wedding</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="card" style="text-align:center">
+
+    <div class="ayah">
+      وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+    </div>
+
+    <audio id="weddingAudio" loop>
+      <source src="./M.mp3.mp4" type="audio/mpeg">
+    </audio>
+
+    <button class="audio-btn" onclick="toggleAudio()">
+      تشغيل / إيقاف الصوت
+    </button>
+
+    <img src="./couple.png.jpeg" class="hero-image">
+
+    <h1>Ahmed & Sahar</h1>
+
+    <div class="subtitle">
+      We Are Getting Married ❤️
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <div class="subtitle">
+      العد التنازلي
+    </div>
+
+    <div class="countdown">
+
+      <div class="time-box">
+        <span id="days">0</span>
+        <small>يوم</small>
+      </div>
+
+      <div class="time-box">
+        <span id="hours">0</span>
+        <small>ساعة</small>
+      </div>
+
+      <div class="time-box">
+        <span id="minutes">0</span>
+        <small>دقيقة</small>
+      </div>
+
+      <div class="time-box">
+        <span id="seconds">0</span>
+        <small>ثانية</small>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <div class="subtitle">
+      📅 13 / 8 / 2026
+    </div>
+
+    <div class="subtitle">
+      📍 قاعة لمار بلازا
+    </div>
+
+    <a class="map-btn" target="_blank" href="https://maps.app.goo.gl/NsQtAgWuaVBe2ojx8">
+      الموقع
+    </a>
+
+  </div>
+
+  <div class="card">
+
+    <div class="subtitle">
+      شاركونا كلماتكم ✨
+    </div>
+
+    <form id="wishForm">
+
+      <input
+        type="text"
+        id="name"
+        placeholder="اسمك"
+      >
+
+      <textarea
+        id="message"
+        placeholder="اكتب رسالة جميلة..."
+      ></textarea>
+
+      <button class="submit-btn">
+        إرسال ❤️
+      </button>
+
+    </form>
+
+  </div>
+
+  <div class="footer">
+    وجودكم أجمل هدية ❤️
+  </div>
+
+</div>
+
+<!--successMessage -->
+
+<div id="successMessage" class="success-box">
+  ❤️ تم إرسال رسالتك بنجاح  
+  <span>شكرًا لمشاركتك مع العروسين</span>
+</div>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

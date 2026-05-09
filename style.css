@@ -1,0 +1,257 @@
+/* style.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Cairo',sans-serif;
+   background:#050505;
+  color:#f3d28a;
+  overflow-x:hidden;
+  min-height:100vh;
+
+  background-image:
+  radial-gradient(circle at top right, rgba(212,175,55,0.15), transparent 30%),
+  radial-gradient(circle at bottom left, rgba(212,175,55,0.12), transparent 25%);
+}
+
+.container{
+  width:90%;
+  max-width:900px;
+  margin:auto;
+  padding:40px 0;
+}
+
+.card{
+  background:rgba(14,14,14,0.9);
+  border:1px solid rgba(212,175,55,.35);
+  border-radius:28px;
+  padding:30px;
+  margin-bottom:25px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 30px rgba(212,175,55,.08);
+  animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.ayah{
+  text-align:center;
+  line-height:2;
+  font-size:30px;
+  margin-bottom:20px;
+}
+
+.audio-btn{
+  background:#d4af37;
+  border:none;
+  padding:12px 24px;
+  border-radius:50px;
+  font-size:16px;
+  cursor:pointer;
+  color:#111;
+  font-weight:bold;
+  transition:.3s;
+  margin-top:20px;
+}
+
+.audio-btn:hover{
+  transform:scale(1.05);
+}
+
+.hero-image{
+  width:280px;
+  display:block;
+  margin:20px auto;
+  border-radius:25px;
+  box-shadow:0 0 25px rgba(212,175,55,.2);
+}
+
+h1{
+  font-family:'Cinzel',serif;
+  text-align:center;
+  font-size:60px;
+  margin-top:15px;
+}
+
+.subtitle{
+  text-align:center;
+  font-size:22px;
+  margin-top:10px;
+}
+
+.countdown{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  margin-top:30px;
+}
+
+.time-box{
+  background:#111;
+  border-radius:18px;
+  padding:20px;
+  text-align:center;
+  border:1px solid rgba(212,175,55,.2);
+}
+
+.time-box span{
+  font-size:40px;
+  display:block;
+}
+
+.map-btn{
+  display:inline-block;
+  margin-top:20px;
+  background:#d4af37;
+  color:#111;
+  padding:14px 30px;
+  border-radius:40px;
+  text-decoration:none;
+}
+
+/* FORM */
+
+form#wishForm{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  margin-top:20px;
+}
+
+form#wishForm input,
+form#wishForm textarea{
+  width:100%;
+  background:#0f0f0f;
+  border:1px solid rgba(212,175,55,.25);
+  border-radius:14px;
+  padding:14px 16px;
+  color:#f3d28a;
+  font-size:16px;
+  outline:none;
+  transition:.3s;
+  font-family:'Cairo',sans-serif;
+}
+
+form#wishForm input::placeholder,
+form#wishForm textarea::placeholder{
+  color:rgba(243,210,138,.6);
+}
+
+form#wishForm input:focus,
+form#wishForm textarea:focus{
+  border-color:#d4af37;
+  box-shadow:0 0 12px rgba(212,175,55,.25);
+}
+
+form#wishForm textarea{
+  min-height:120px;
+  resize:none;
+  line-height:1.8;
+}
+
+.submit-btn{
+  background:linear-gradient(135deg,#d4af37,#f3d28a);
+  border:none;
+  color:#111;
+  padding:16px;
+  border-radius:16px;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.submit-btn:hover{
+  transform:translateY(-2px);
+}
+
+/*  success */
+
+.success-box{
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30px);
+  background: linear-gradient(135deg,#d4af37,#f3d28a);
+  color: #111;
+  padding: 18px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+  z-index: 9999;
+}
+
+.success-box.show{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.success-box span{
+  display:block;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.footer{
+  text-align:center;
+  margin-top:25px;
+  font-size:18px;
+}
+
+@media(max-width:768px){
+
+  h1{
+    font-size:40px;
+  }
+
+  .countdown{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+/* ورد */
+
+
+ .confetti {
+  position: fixed;
+  top: -10px;
+  width: 8px;
+  height: 8px;
+  z-index: 9999;
+  pointer-events: none;
+  animation: fallConfetti linear forwards;
+}
+
+@keyframes fallConfetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
